@@ -2,6 +2,12 @@
 
 一套可以像刷信息流一样翻的公开素材库，也方便其他 AI 直接读取。
 
+- 网站：https://liyue-creates.github.io/weiguo-sucai/
+- JSON：https://liyue-creates.github.io/weiguo-sucai/data/materials.json
+- 给 AI：https://liyue-creates.github.io/weiguo-sucai/llms.txt
+- 全文：https://liyue-creates.github.io/weiguo-sucai/materials.md
+- 仓库：https://github.com/liyue-creates/weiguo-sucai
+
 - 浏览页：`index.html`
 - 结构化数据：`data/materials.json`
 - 全文：`materials.md`

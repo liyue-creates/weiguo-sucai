@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10 22:23",
+  "generated_at": "2026-11-10 22:24",
   "timezone": "Asia/Seoul",
   "item_count": 121,
   "visible_count": 121,
@@ -28,9 +28,9 @@
   ],
   "json_path": "data/materials.json",
   "md_path": "materials.md",
-  "json_abs_hint": "./data/materials.json",
-  "md_abs_hint": "./materials.md",
-  "site_abs_hint": "./index.html",
+  "json_abs_hint": "https://liyue-creates.github.io/weiguo-sucai/data/materials.json",
+  "md_abs_hint": "https://liyue-creates.github.io/weiguo-sucai/materials.md",
+  "site_abs_hint": "https://liyue-creates.github.io/weiguo-sucai/",
   "items": [
     {
       "id": "S133",

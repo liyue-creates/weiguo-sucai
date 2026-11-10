@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parent
 SOURCE_DIR = Path(os.environ.get("SUCAI_SOURCE", ROOT.parent))
 OUT_DIR = ROOT
 DATA_DIR = OUT_DIR / "data"
+SITE_URL = os.environ.get("SITE_URL", "https://liyue-creates.github.io/weiguo-sucai").rstrip("/")
 SEOUL = timezone(timedelta(hours=9))
 
 CN_BATCH = [
@@ -1060,9 +1061,9 @@ def main() -> None:
         "stages": STAGE_CANON,
         "json_path": "data/materials.json",
         "md_path": "materials.md",
-        "json_abs_hint": "./data/materials.json",
-        "md_abs_hint": "./materials.md",
-        "site_abs_hint": "./index.html",
+        "json_abs_hint": f"{SITE_URL}/data/materials.json",
+        "md_abs_hint": f"{SITE_URL}/materials.md",
+        "site_abs_hint": f"{SITE_URL}/",
         "items": finalized,
     }
 
