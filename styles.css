@@ -302,4 +302,97 @@ a { color: var(--accent); }
   .feed { column-count: 3; }
 }
 
+.chips.marks .chip[aria-pressed="true"] {
+  background: #8a5a22;
+  border-color: #8a5a22;
+  color: #fff8ee;
+}
+.toolbar .text-btn,
+.text-btn {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--ink);
+  cursor: pointer;
+}
+.text-btn.solid {
+  background: var(--ink);
+  color: #fffaf3;
+  border-color: var(--ink);
+}
+.mark-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.sheet .mark-row { margin: 4px 0 14px; }
+.mark-btn {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font: inherit;
+  font-size: 12px;
+  color: var(--muted);
+  cursor: pointer;
+}
+.mark-btn[aria-pressed="true"] {
+  background: var(--accent-soft);
+  color: #9a3a28;
+  border-color: transparent;
+}
+.mark-btn[data-mark="doing"][aria-pressed="true"] {
+  background: #e4eedc;
+  color: #3f6b58;
+}
+.sync-panel {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  width: min(520px, calc(100% - 24px));
+  background: var(--paper);
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(40, 22, 12, 0.22);
+  padding: 16px;
+  z-index: 40;
+}
+.sync-panel p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.sync-panel textarea {
+  width: 100%;
+  min-height: 96px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+  font: inherit;
+  font-size: 13px;
+  resize: vertical;
+  background: #fff;
+  color: var(--ink);
+}
+.sync-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: #fff8ee;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  z-index: 50;
+  max-width: calc(100% - 32px);
+  text-align: center;
+}
+
 [hidden] { display: none !important; }

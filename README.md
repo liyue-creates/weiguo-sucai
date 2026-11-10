@@ -21,7 +21,7 @@
 
 1. 把当天的条目追加进 `素材池_总整理.md`（沿用现有的 `Sxxx 标题｜链接｜数据｜分类｜…` 格式，或写成 `每日素材_YYYY-MM-DD.md` 那种分条字段）。
 2. 同时保存一份 `每日素材_YYYY-MM-DD.md`。
-3. 如果有新的评价，改 `site/data/ratings.json`，例如 `{ "S134": "值得做" }`。评价写成 `pass` 的条目会在页面里默认隐藏。
+3. 如果有新的评价或要记下「收藏 / 在做」，改 `site/data/ratings.json`（格式见下面）。评价写成 `pass` 的条目会在页面里默认隐藏。
 4. 重新生成站点数据：
 
 ```bash
@@ -49,6 +49,52 @@ git push origin main
 
 ## 数据字段
 
-每条素材大致包含：`id`、`batch`、`date`、`title`、`category`、`filter_tags`、`links`、`data`、`why_popular`、`viewer_moment`、`stage`、`idea`、`difficulty`、`tags`、`rating`、`hidden`、`pushed`。
+每条素材大致包含：`id`、`batch`、`date`、`title`、`category`、`filter_tags`、`links`、`data`、`why_popular`、`viewer_moment`、`stage`、`idea`、`difficulty`、`tags`、`rating`、`hidden`、`pushed`、`favorite`、`doing`。
 
 没有核实过的链接会如实留空，不会补造。风向标等二手数据会保留原文里的“自述 / 未核验”提示。
+
+## 收藏和「在做」
+
+页面上每张卡（和详情里）有两个独立按钮：`⭐ 收藏`、`🛠 在做`。这两个标记存在浏览器的 `localStorage` 里（键名 `weiguo-sucai-marks`），换浏览器或换设备不会自动带过去。
+
+顶部筛选「全部 / ⭐ 我的收藏 / 🛠 在做」可以和分类、阶段、批次、搜索一起用。`值得做` 只是评价徽章，**不会**自动标成「在做」。
+
+### 在设备之间同步
+
+点「导出收藏」会复制一段 JSON。到另一台设备点「导入收藏」贴上即可。导入会与当前设备已有的本地标记合并，同一条以导入的为准。
+
+导出格式：
+
+```json
+{"v":1,"marks":{"S122":{"favorite":true},"S126":{"favorite":true,"doing":true}}}
+```
+
+`favorite` / `doing` 为 `false` 表示在这台设备上明确取消过（也会覆盖服务端标记）。
+
+### 写进数据文件，让其他 AI 也能读到
+
+如果她在对话里说某条要收藏或已经开始做，把标记写进 `data/ratings.json`，再运行 `python3 generate.py`。`materials.json` 和 `materials.md` 会带上 `favorite` / `doing`，其他 AI 就能读到。
+
+`ratings.json` 兼容两种写法：
+
+```json
+{
+  "S047": "值得做",
+  "S064": {
+    "rating": "值得做"
+  },
+  "S122": {
+    "favorite": true,
+    "doing": false
+  },
+  "S126": {
+    "rating": "待反馈",
+    "favorite": true,
+    "doing": true
+  }
+}
+```
+
+- 只写字符串时，只更新评价，不会改收藏/在做。
+- 对象里的 `rating`、`favorite`、`doing` 都是可选的。
+- 页面上的本地勾选会覆盖这些服务端字段；取消勾选只改本地，不会写回 `ratings.json`。

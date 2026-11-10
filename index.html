@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,650;1,6..72,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=2" />
+  <link rel="stylesheet" href="./styles.css?v=3" />
 </head>
 <body>
   <a class="skip" href="#feed">跳到卡片列表</a>
@@ -26,6 +26,7 @@
   </header>
 
   <div class="sticky-bar">
+    <div class="chips marks" id="markChips" role="tablist" aria-label="我的收藏"></div>
     <div class="chips" id="catChips" role="tablist" aria-label="分类"></div>
     <div class="chips stages" id="stageChips" role="tablist" aria-label="阶段"></div>
     <div class="toolbar">
@@ -37,6 +38,8 @@
         <input type="checkbox" id="showPass" />
         <span>显示 pass</span>
       </label>
+      <button type="button" class="text-btn" id="exportBtn">导出收藏</button>
+      <button type="button" class="text-btn" id="importOpenBtn">导入收藏</button>
       <p class="count" id="count"></p>
     </div>
   </div>
@@ -55,12 +58,22 @@
       <p class="sheet-kicker" id="d-kicker"></p>
       <h2 id="d-title"></h2>
       <div class="sheet-pills" id="d-pills"></div>
+      <div class="mark-row" id="d-marks"></div>
       <blockquote class="sheet-quote" id="d-viewer" hidden></blockquote>
       <section class="sheet-grid" id="d-fields"></section>
       <div class="sheet-links" id="d-links"></div>
     </article>
   </div>
 
-  <script src="./app.js?v=2"></script>
+  <div id="syncPanel" class="sync-panel" hidden>
+    <p>把另一台设备导出的代码贴在这里。导入会与这台设备上已有的标记合并，同一条以导入的为准。</p>
+    <textarea id="importBox" rows="5" placeholder='{"v":1,"marks":{"S122":{"favorite":true}}}'></textarea>
+    <div class="sync-actions">
+      <button type="button" class="text-btn solid" id="importBtn">导入</button>
+      <button type="button" class="text-btn" id="cancelImport">取消</button>
+    </div>
+  </div>
+  <div id="toast" class="toast" hidden></div>
+  <script src="./app.js?v=3"></script>
 </body>
 </html>

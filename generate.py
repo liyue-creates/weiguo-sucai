@@ -845,6 +845,18 @@ def links_as_objects(urls: list[str]) -> list[dict]:
     return [{"url": u, "label": link_label(u)} for u in urls]
 
 
+def parse_rating_entry(value):
+    """Accept either '值得做' or {'rating': '值得做', 'favorite': True, 'doing': False}."""
+    if isinstance(value, str):
+        return value, None, None
+    if isinstance(value, dict):
+        rating = value.get("rating")
+        fav = value.get("favorite")
+        doing = value.get("doing")
+        return rating, (None if fav is None else bool(fav)), (None if doing is None else bool(doing))
+    return None, None, None
+
+
 def load_json_overlay(path: Path) -> dict:
     if not path.exists():
         return {}
@@ -885,8 +897,16 @@ def finalize(items: dict[str, dict]) -> list[dict]:
 
         if sid in RATING_OVERRIDE:
             item["rating"] = RATING_OVERRIDE[sid]
+        item["favorite"] = False
+        item["doing"] = False
         if sid in ratings_file:
-            item["rating"] = normalize_rating(str(ratings_file[sid]))
+            rating_text, fav, doing = parse_rating_entry(ratings_file[sid])
+            if rating_text:
+                item["rating"] = normalize_rating(rating_text)
+            if fav is not None:
+                item["favorite"] = bool(fav)
+            if doing is not None:
+                item["doing"] = bool(doing)
 
         # scrub textual fields
         for key in ["title", "data", "why_popular", "viewer_moment", "stage", "idea", "difficulty", "raw_category", "notes", "rating"]:
@@ -929,6 +949,8 @@ def finalize(items: dict[str, dict]) -> list[dict]:
             "rating": item.get("rating") or "待反馈",
             "hidden": hidden,
             "pushed": bool(item.get("pushed", True)),
+            "favorite": bool(item.get("favorite")),
+            "doing": bool(item.get("doing")),
         })
 
     # newest first: by date desc, then id desc
@@ -976,6 +998,13 @@ def render_materials_md(payload: dict) -> str:
             meta.append(f"难度：{item['difficulty']}")
         if item.get("rating") and item["rating"] != "待反馈":
             meta.append(f"评价：{item['rating']}")
+        marks = []
+        if item.get("favorite"):
+            marks.append("收藏")
+        if item.get("doing"):
+            marks.append("在做")
+        if marks:
+            meta.append("标记：" + "、".join(marks))
         lines.append("- " + " ｜ ".join(meta))
         if item.get("tags"):
             lines.append("- 标签：" + "、".join(item["tags"]))
@@ -1013,10 +1042,12 @@ def render_llms_txt(payload: dict) -> str:
 
 1. 先读 `{payload['json_path']}`，按 `id`（如 S131）引用条目。
 2. 需要连贯叙述时再读 `{payload['md_path']}`。
-3. 每条包含：标题、批次与日期、来源链接、数据、为什么火、观众那一刻、阶段、可以做什么、难度、标签、评价。
+3. 每条包含：标题、批次与日期、来源链接、数据、为什么火、观众那一刻、阶段、可以做什么、难度、标签、评价、`favorite`（收藏）、`doing`（在做）。
 4. `hidden=true` 或 `rating=pass` 的条目不要当作推荐。
-5. 数据字段若写明「风向标自述 / 未核验 / 缺失」，不要把数字当成已核实事实。
-6. 只使用条目里出现过的真实链接，不要补造来源。
+5. `favorite` / `doing` 来自 `data/ratings.json` 的服务端记录；页面上的本地勾选会覆盖它们，但不会写回这个文件。
+6. `rating=值得做` 只表示评价，不要自动当成正在做。
+7. 数据字段若写明「风向标自述 / 未核验 / 缺失」，不要把数字当成已核实事实。
+8. 只使用条目里出现过的真实链接，不要补造来源。
 
 ## 更新
 
