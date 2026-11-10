@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>每日灵感 · 可刷的素材库</title>
+  <meta name="description" content="按天更新的公开灵感素材卡：小作品、人群痛点、观点帖和 GitHub 工具。人也好，AI 也好，都可以随时来读。" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,650;1,6..72,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#feed">跳到卡片列表</a>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Daily sparks</p>
+      <h1>每日灵感</h1>
+      <p class="lede">像刷小红书一样翻素材。点开一张卡，能看到它为什么火、观众那一刻在想什么，以及可以做成什么。</p>
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <input id="search" type="search" placeholder="搜索标题、灵感、链接或编号…" autocomplete="off" />
+      </div>
+    </div>
+  </header>
+
+  <div class="sticky-bar">
+    <div class="chips" id="catChips" role="tablist" aria-label="分类"></div>
+    <div class="chips stages" id="stageChips" role="tablist" aria-label="阶段"></div>
+    <div class="toolbar">
+      <label class="select-wrap">
+        <span class="sr-only">按批次筛选</span>
+        <select id="batchSelect"></select>
+      </label>
+      <label class="check">
+        <input type="checkbox" id="showPass" />
+        <span>显示 pass</span>
+      </label>
+      <p class="count" id="count"></p>
+    </div>
+  </div>
+
+  <main id="feed" class="feed" aria-live="polite"></main>
+  <p id="empty" class="empty" hidden>没有符合筛选的卡片。换个分类，或清空搜索再试试。</p>
+
+  <footer class="foot">
+    <p id="updated"></p>
+    <p>给其他 AI 读：<a href="./llms.txt">llms.txt</a> · <a href="./data/materials.json">materials.json</a> · <a href="./materials.md">materials.md</a></p>
+  </footer>
+
+  <div id="overlay" class="overlay" hidden>
+    <article class="sheet" role="dialog" aria-modal="true" aria-labelledby="d-title">
+      <button class="close" id="closeBtn" type="button" aria-label="关闭">×</button>
+      <p class="sheet-kicker" id="d-kicker"></p>
+      <h2 id="d-title"></h2>
+      <div class="sheet-pills" id="d-pills"></div>
+      <blockquote class="sheet-quote" id="d-viewer" hidden></blockquote>
+      <section class="sheet-grid" id="d-fields"></section>
+      <div class="sheet-links" id="d-links"></div>
+    </article>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
