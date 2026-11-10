@@ -301,3 +301,5 @@ a { color: var(--accent); }
 @media (min-width: 1024px) {
   .feed { column-count: 3; }
 }
+
+[hidden] { display: none !important; }
