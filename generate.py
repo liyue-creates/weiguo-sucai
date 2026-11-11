@@ -175,7 +175,12 @@ def cn_batch_num(text: str) -> int | None:
     for name, num in CN_BATCH:
         if token == name:
             return num
-    return None
+    digits = {"一": 1, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9}
+    if "十" in token:
+        tens, _, ones = token.partition("十")
+        value = (digits.get(tens, 1) if tens else 1) * 10 + (digits.get(ones, 0) if ones else 0)
+        return value
+    return digits.get(token)
 
 
 def parse_date(text: str) -> str | None:
