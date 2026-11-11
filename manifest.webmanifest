@@ -1,0 +1,37 @@
+{
+  "name": "每日灵感 · 可刷的素材库",
+  "short_name": "每日灵感",
+  "description": "按天更新的公开灵感素材卡：小作品、人群痛点、观点帖和 GitHub 工具。人也好，AI 也好，都可以随时来读。",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3ece3",
+  "theme_color": "#f3ece3",
+  "lang": "zh-Hans",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

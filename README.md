@@ -12,8 +12,17 @@
 - 结构化数据：`data/materials.json`
 - 全文：`materials.md`
 - 给 AI 的入口：`llms.txt`
+- 图标与清单：`icon.svg`、`favicon.ico`、`apple-touch-icon.png`、`icon-192.png`、`icon-512.png`、`manifest.webmanifest`
 
-页面是纯静态的，不用打包。用本地文件打开时，部分浏览器会拦住 `fetch`，请用任意静态服务器，或看 GitHub Pages 上的地址。
+页面是纯静态的，不用打包。用本地文件打开时，部分浏览器会拦住 `fetch`，请用任意静态服务器，或看 GitHub Pages 上的地址。`generate.py` 只会重建 `data/materials.json`、`materials.md` 和 `llms.txt`，不会改图标或 `index.html`。
+
+## 添加到主屏幕或桌面
+
+把网站加到主屏幕或程序坞后，图标是暖红色底上的奶油色火花，名字是「每日灵感」。
+
+- iPhone / iPad：用 Safari 打开网站，点分享，再选「添加到主屏幕」。
+- Android：用 Chrome 打开，点菜单里的「添加到主屏幕」或「安装应用」。
+- Mac：Safari（Sonoma 及以后）可用「添加到程序坞」；也可以把网站拖到桌面做成快捷方式。
 
 ## 每天怎么更新
 
