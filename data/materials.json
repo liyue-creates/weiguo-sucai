@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-11-12 08:05",
+  "generated_at": "2026-11-13 03:12",
   "timezone": "Asia/Seoul",
-  "item_count": 130,
-  "visible_count": 130,
+  "item_count": 145,
+  "material_count": 130,
+  "business_count": 15,
+  "visible_count": 145,
   "batch_min": 1,
   "batch_max": 23,
   "categories": [
@@ -26,12 +28,935 @@
     "常青",
     "扩散"
   ],
+  "boards": [
+    "素材",
+    "商业"
+  ],
+  "business_subtypes": [
+    "起步复盘",
+    "卖货·小红书",
+    "卖货·闲鱼",
+    "卖货·海外",
+    "商业思路"
+  ],
   "json_path": "data/materials.json",
   "md_path": "materials.md",
   "json_abs_hint": "https://liyue-creates.github.io/weiguo-sucai/data/materials.json",
   "md_abs_hint": "https://liyue-creates.github.io/weiguo-sucai/materials.md",
   "site_abs_hint": "https://liyue-creates.github.io/weiguo-sucai/",
   "items": [
+    {
+      "id": "B001",
+      "board": "商业",
+      "subtype": "商业思路",
+      "batch": null,
+      "business_batch": 1,
+      "date": "2026-11-13",
+      "title": "Dan Koe：2027 年最赚钱的 AI 生意是「一个人顶一支创意团队」",
+      "category": "商业",
+      "category_codes": [],
+      "filter_tags": [
+        "商业",
+        "商业思路"
+      ],
+      "links": [
+        {
+          "url": "https://x.com/thedankoe/status/2117664712532123680",
+          "label": "X"
+        },
+        {
+          "url": "https://letters.thedankoe.com/p/the-most-lucrative-ai-business-to",
+          "label": "letters.thedankoe.com"
+        }
+      ],
+      "published": "X 长文，2026-11-04 02:06（首尔时间），作者 @thedankoe（108 万粉）。截至 11-13：287 万浏览、1.27 万赞、2.98 万收藏、1686 转发",
+      "what": "两条路。一是做自己的创意团队：个人品牌、受众、数字产品、邮件列表；二是给忙不过来的创始人或创作者当外包「创意总监」，代做内容。作者设想的价格是 1–3 个客户每月 1–7.5 万美元，第一个客户每月 2500–5000 美元（作者设想，文中没有市场数据）",
+      "result": "不是个人收入复盘，是方法文。作者是内容工具 Eden 的创始人，文中多处推荐自家工具和 49 美元的写作工作坊",
+      "steps": [
+        "先做「品牌文档」：用一组问题采访客户或自问（想帮谁、他们怎么抱怨、你经历过什么、谁影响了你、你和别人看法哪里不同、你反对什么），录音转文字存下来",
+        "抓自己最好的 10–20 条内容（还没开始发的人，就抓最影响你的 5–10 个人的内容），让 AI 总结独特观点和语气，存成「内容文档」",
+        "让 AI 结合这两份文档和近 6–12 个月表现好的内容，做一张约 6 个月的「内容地图」：3–4 个支柱 → 每个 5–7 个话题 → 每个话题 5–10 个点子 → 每个点子 4–5 个角度",
+        "AI 起草，人来改。文中引用代理商的话：AI 能写到「差不多到位」，人只负责审改，每天从 12 小时降到 4 小时",
+        "找第一个客户：先免费干活。给想合作的人写好 10 条帖子直接私信过去，每天发 10 条私信；私信不回就公开发「这是我的应聘作品」"
+      ],
+      "key_moves": [
+        "品牌先于爆款：一条百万浏览、其余一千浏览，说明内容还行但品牌不存在",
+        "用「内容地图」代替每天想选题，按支柱持续发",
+        "获客靠免费样稿，而不是冷冰冰的自我介绍"
+      ],
+      "borrow": "先把这套流程用在自己的主号上：写一份品牌文档、一张 6 个月内容地图，连续发 4 周看数据。等自己号上有稳定交付的记录，再决定要不要接别人的代做。",
+      "pitfalls": "价格区间没有数据支撑；作者在卖工具；作者自己也提醒「不要把它当成快速致富」",
+      "data": "不是个人收入复盘，是方法文。作者是内容工具 Eden 的创始人，文中多处推荐自家工具和 49 美元的写作工作坊",
+      "why_popular": "",
+      "viewer_moment": "",
+      "stage": "",
+      "stage_norm": "",
+      "idea": "先把这套流程用在自己的主号上：写一份品牌文档、一张 6 个月内容地图，连续发 4 周看数据。等自己号上有稳定交付的记录，再决定要不要接别人的代做。",
+      "difficulty": "",
+      "tags": [
+        "一人公司",
+        "内容代运营",
+        "AI 提效"
+      ],
+      "rating": "待反馈",
+      "hidden": false,
+      "pushed": true,
+      "favorite": false,
+      "doing": false
+    },
+    {
+      "id": "B002",
+      "board": "商业",
+      "subtype": "起步复盘",
+      "batch": null,
+      "business_batch": 1,
+      "date": "2026-11-13",
+      "title": "Marc Lou：7 天做出的代码模板 ShipFast，上线 7 小时卖了 1000 美元",
+      "category": "商业",
+      "category_codes": [],
+      "filter_tags": [
+        "商业",
+        "起步复盘"
+      ],
+      "links": [
+        {
+          "url": "https://marclou.com/tweets/shipfast-is-a-tiny-startup-that-changed-my-life-forever",
+          "label": "marclou.com"
+        },
+        {
+          "url": "https://marclou.com/tweets/i-made-1-000-in-7-hours-with-shipfast",
+          "label": "marclou.com"
+        },
+        {
+          "url": "https://marclou.com/tweets/shipfast-made-6-000-in-7-days-after-0-on-my-first-startup",
+          "label": "marclou.com"
+        },
+        {
+          "url": "https://www.starterstory.com/marc-lou-shipfast",
+          "label": "starterstory.com"
+        }
+      ],
+      "published": "发布帖 2023-08-31（X @marclou）；Starter Story 整理稿 2024-04-13",
+      "what": "Next.js 网站代码模板，给想几天内上线产品的独立开发者；一次性买断。首发时前 50 位客户减 50 美元，原价原文没说",
+      "result": "作者自述：上线 7 小时 1300 访客、1000 美元；7 天 6000 美元（对比：第一个创业项目做了 365 天赚 0 美元，HabitsGarden 做了 365 天赚 5000 美元）。Starter Story 整理：Product Hunt 当日第 2 名、941 票，标题称 4 个月 52.8 万美元（第三方整理）",
+      "steps": [
+        "之前两年连续做了 16 个小产品，每个都在 X 上公开做（build in public），发布前已有 4 万多粉丝（Starter Story 数据）",
+        "发现每个产品都在重复写同样的代码，于是花 1 周把这些代码整理成模板",
+        "2023-08-31 在 X 发「I'm launching a new project」，附 Product Hunt 链接，写明前 50 位客户减 50 美元",
+        "同时发 Product Hunt、Hacker News，再去相关的 Reddit 社区发（Starter Story）",
+        "首日反应：7 小时 1300 访客、1000 美元，他马上在 X 晒数字，又带来一波",
+        "之后持续加功能；每次在 X 发新品都拍搞笑短剧视频，配一个挑战常识的标题（Starter Story）",
+        "有没有先收邮箱：原文没说；他另有 newsletter"
+      ],
+      "key_moves": [
+        "把自己反复用的东西直接产品化，开发时间只要 1 周",
+        "首发限量折扣（前 50 名），给第一波人一个马上买的理由",
+        "第一批买家来自之前每次小发布攒下的 X 粉丝；他的教训是开始别做免费档，先一次性收费，再考虑订阅（Starter Story）"
+      ],
+      "borrow": "把自己做小作品时反复用到的东西（提示词、页面模板、工作流）整理成一份，先在主号公开用 2–3 次让大家看到效果，再挂一个「前 N 人优惠」的版本试卖。",
+      "pitfalls": "原文没说",
+      "data": "作者自述：上线 7 小时 1300 访客、1000 美元；7 天 6000 美元（对比：第一个创业项目做了 365 天赚 0 美元，HabitsGarden 做了 365 天赚 5000 美元）。Starter Story 整理：Product Hunt 当日第 2 名、941 票，标题称 4 个月 52.8 万美元（第三方整理）",
+      "why_popular": "",
+      "viewer_moment": "",
+      "stage": "",
+      "stage_norm": "",
+      "idea": "把自己做小作品时反复用到的东西（提示词、页面模板、工作流）整理成一份，先在主号公开用 2–3 次让大家看到效果，再挂一个「前 N 人优惠」的版本试卖。",
+      "difficulty": "",
+      "tags": [
+        "build in public",
+        "Product Hunt",
+        "限量折扣"
+      ],
+      "rating": "待反馈",
+      "hidden": false,
+      "pushed": true,
+      "favorite": false,
+      "doing": false
+    },
+    {
+      "id": "B003",
+      "board": "商业",
+      "subtype": "起步复盘",
+      "batch": null,
+      "business_batch": 1,
+      "date": "2026-11-13",
+      "title": "Tony Dinh：周末做的 ChatGPT 界面，靠「每加一个功能发一条推」7 天卖到 2.2 万美元",
+      "category": "商业",
+      "category_codes": [],
+      "filter_tags": [
+        "商业",
+        "起步复盘"
+      ],
+      "links": [
+        {
+          "url": "https://news.tonydinh.com/p/making-22k-in-7-days-the-story",
+          "label": "news.tonydinh.com"
+        },
+        {
+          "url": "https://news.tonydinh.com/p/early-bird-license-of-my-new-product",
+          "label": "news.tonydinh.com"
+        },
+        {
+          "url": "https://news.tonydinh.com/p/nov-2024-my-first-million",
+          "label": "news.tonydinh.com"
+        }
+      ],
+      "published": "作者 newsletter，2023-03-10、2023-04-02、2024-11-22（X @tdinh_me）",
+      "what": "TypingMind，一个比官方更顺手的 ChatGPT 界面，用户自带 API key；一次性买断，早鸟 19 美元，Product Hunt 发布后涨到 29 美元，之后 39 美元",
+      "result": "作者自述：3/6 上线当天出首单；3/7 累计 1000 美元，3/8 2000，3/9 4000，3/10 1 万；3/11 Product Hunt 当日第 1，一天内从 1 万涨到 2.2 万美元；「99% 的销售来自我的 Twitter」。20 个月后，近 12 个月营收 100 万美元（2024-11，作者自述）",
+      "steps": [
+        "3/1 OpenAI 开放 ChatGPT API，当天决定给自己解决痛点：每天要重新登录、回答慢、不能搜历史",
+        "3/2 买域名，平日拖拖拉拉，于是把整个周末压上去做完",
+        "3/6 在 X 发一条：「TypingMind — A better UI for ChatGPT」",
+        "反响很大，当天才加上付款功能，当天出第一单",
+        "之后每天多次加功能、修 bug，每加一个功能就发一条推，作者原话「这就是我全部的营销」",
+        "3/10 给 newsletter 订阅者发邮件：早鸟价 19 美元，明天上 Product Hunt 后涨到 29、再到 39，截止约 24 小时",
+        "3/11 发 Product Hunt，靠 X 粉丝和 newsletter 读者帮忙冲到当日第 1",
+        "之后以一次性买断为主，再把一部分个人用户转成团队版订阅；Reddit 上几乎每天有人自发提到它"
+      ],
+      "key_moves": [
+        "先发出去看反应，有人要再加付款",
+        "更新日志就是营销：每个新功能一条推，攒下来直接当 changelog",
+        "用 newsletter 发早鸟价，并写明涨价时间"
+      ],
+      "borrow": "下一个小作品上线后，每改一个功能就在主号发一条「今天加了 XX」的短帖或短视频，连发 7 天，记下每条带来多少人问链接。",
+      "pitfalls": "作者说自己完全低估了 AI 的热度，原本只预期几千美元；后续收入他不再公开",
+      "data": "作者自述：3/6 上线当天出首单；3/7 累计 1000 美元，3/8 2000，3/9 4000，3/10 1 万；3/11 Product Hunt 当日第 1，一天内从 1 万涨到 2.2 万美元；「99% 的销售来自我的 Twitter」。20 个月后，近 12 个月营收 100 万美元（2024-11，作者自述）",
+      "why_popular": "",
+      "viewer_moment": "",
+      "stage": "",
+      "stage_norm": "",
+      "idea": "下一个小作品上线后，每改一个功能就在主号发一条「今天加了 XX」的短帖或短视频，连发 7 天，记下每条带来多少人问链接。",
+      "difficulty": "",
+      "tags": [
+        "AI 工具",
+        "Product Hunt",
+        "早鸟价"
+      ],
+      "rating": "待反馈",
+      "hidden": false,
+      "pushed": true,
+      "favorite": false,
+      "doing": false
+    },
+    {
+      "id": "B004",
+      "board": "商业",
+      "subtype": "起步复盘",
+      "batch": null,
+      "business_batch": 1,
+      "date": "2026-11-13",
+      "title": "Easlo：20 岁卖 Notion 模板，先免费送两个月，一年卖了 23.9 万美元",
+      "category": "商业",
+      "category_codes": [],
+      "filter_tags": [
+        "商业",
+        "起步复盘"
+      ],
+      "links": [
+        {
+          "url": "https://www.businessinsider.com/selling-notion-template-twitter-marketing-gum-road-digital-product",
+          "label": "businessinsider.com"
+        }
+      ],
+      "published": "Business Insider 口述稿，2022-12-20（作者 Jason Ruiyi Chin，网名 Easlo，新加坡）。Insider 称已用凭证核实收入",
+      "what": "Notion 模板，卖给想整理学习、财务和生活的人，在 Gumroad 上卖。子弹笔记 20 美元、记账 40 美元、旗舰款「第二大脑」130 美元",
+      "result": "2022 年模板销售 23.9 万美元（Insider 核实）；第一个付费模板首月 3000 多美元；「第二大脑」一款贡献 10 万多美元；X 粉丝 21.1 万",
+      "steps": [
+        "2021 年高中毕业，自己一直用 Notion 记课堂笔记，开始做记账、习惯追踪这类基础模板",
+        "看 YouTube 学 Notion 用法；研究 X 上效率类大号用什么格式发内容，照着学",
+        "2021 年夏天约两个月，持续免费发布新模板：Gumroad 免费下载，可选打赏；在 X 和 Product Hunt 上推",
+        "秋天开始收到最高 100 美元的打赏，判断这能做成生意",
+        "2021 年 11 月开始对新模板收费：给所有下载过免费模板的人发了一封邮件",
+        "首月 3000 多美元。Gumroad 上只要把价格从 0 改成定价",
+        "放大：每天发 2–3 条推、至少回复 10 条别人的推、每周一条长串；从没投过广告。竞争变多后，转去做教 Notion 的内容"
+      ],
+      "key_moves": [
+        "「免费 + 可打赏」同时做了两件事：收邮箱、测出谁愿意付钱",
+        "开始收费那天，第一封邮件发给免费下载过的人",
+        "低价款撑销量（20、40 美元占近一半），高价旗舰款撑收入"
+      ],
+      "borrow": "把一个自己已经在用的模板或提示词包放到 Gumroad，设成 0 元起、可打赏，在主号发出去收邮箱；等有人主动打赏，再做一个付费升级版，先发邮件给这批人。",
+      "pitfalls": "一年后同类模板竞争明显变多，他转向教育内容",
+      "data": "2022 年模板销售 23.9 万美元（Insider 核实）；第一个付费模板首月 3000 多美元；「第二大脑」一款贡献 10 万多美元；X 粉丝 21.1 万",
+      "why_popular": "",
+      "viewer_moment": "",
+      "stage": "",
+      "stage_norm": "",
+      "idea": "把一个自己已经在用的模板或提示词包放到 Gumroad，设成 0 元起、可打赏，在主号发出去收邮箱；等有人主动打赏，再做一个付费升级版，先发邮件给这批人。",
+      "difficulty": "",
+      "tags": [
+        "数字产品",
+        "Gumroad",
+        "模板",
+        "免费引流"
+      ],
+      "rating": "待反馈",
+      "hidden": false,
+      "pushed": true,
+      "favorite": false,
+      "doing": false
+    },
+    {
+      "id": "B005",
+      "board": "商业",
+      "subtype": "起步复盘",
+      "batch": null,
+      "business_batch": 1,
+      "date": "2026-11-13",
+      "title": "Dev Blocks：等待名单 100 人，每周一封纯文本进度邮件，两天卖出 5 单",
+      "category": "商业",
+      "category_codes": [],
+      "filter_tags": [
+        "商业",
+        "起步复盘"
+      ],
+      "links": [
+        {
+          "url": "https://www.reddit.com/r/SideProject/comments/1fm7idg/got_my_first_sale_after_3_failed_products_here_is",
+          "label": "Reddit"
+        }
+      ],
+      "published": "Reddit r/SideProject，约 2024 年（页面显示「2 年前」），点赞和评论数缺失",
+      "what": "Dev Blocks，给开发者用的小产品（具体内容原文没细说）；价格缺失",
+      "result": "作者自述：两天内首批 5 单，1 单来自等待名单，4 单来自 X",
+      "steps": [
+        "前三个产品都做得太复杂，都失败了",
+        "这次只解决自己的一个小痛点，产品做得很简单",
+        "先做一个基础的等待名单页，发了几条帖子就攒到 100 个订阅",
+        "私信潜在用户，问清楚他们最想先要什么",
+        "加入 X 上的创作者社区并积极互动，起步阶段带来了很多关注",
+        "每周给等待名单发一封纯文本的产品进度邮件，打开率 60% 以上，第一位客户就来自邮件",
+        "上线，两天 5 单"
+      ],
+      "key_moves": [
+        "等待名单不是收完就放着，每周发进度把人「捂热」",
+        "用私信问优先级，而不是自己猜功能",
+        "产品做小，把省下的时间放到营销上"
+      ],
+      "borrow": "下一个小工具开做前，先放一个留邮箱或联系方式的页面，每周发一封「这周做到哪了」的短消息，上线当天第一个通知他们。",
+      "pitfalls": "作者说这套方法不一定适合所有人",
+      "data": "作者自述：两天内首批 5 单，1 单来自等待名单，4 单来自 X",
+      "why_popular": "",
+      "viewer_moment": "",
+      "stage": "",
+      "stage_norm": "",
+      "idea": "下一个小工具开做前，先放一个留邮箱或联系方式的页面，每周发一封「这周做到哪了」的短消息，上线当天第一个通知他们。",
+      "difficulty": "",
+      "tags": [
+        "等待名单",
+        "邮件",
+        "X 社区"
+      ],
+      "rating": "待反馈",
+      "hidden": false,
+      "pushed": true,
+      "favorite": false,
+      "doing": false
+    },
+    {
+      "id": "B006",
+      "board": "商业",
+      "subtype": "起步复盘",
+      "batch": null,
+      "business_batch": 1,
+      "date": "2026-11-13",
+      "title": "fastwaitlist：3 天等待名单不到 25 人就换点子，上线 3 周赚了 655 美元",
+      "category": "商业",
+      "category_codes": [],
+      "filter_tags": [
+        "商业",
+        "起步复盘"
+      ],
+      "links": [
+        {
+          "url": "https://www.reddit.com/r/SideProject/comments/1guh8wj/3_weeks_into_my_new_side_project_and_655_earned",
+          "label": "Reddit"
+        }
+      ],
+      "published": "Reddit r/SideProject，约 2024 年（页面显示「2 年前」），点赞和评论数缺失",
+      "what": "fastwaitlist.com，帮人快速做等待名单页的工具；价格缺失",
+      "result": "作者自述：上线约 3 周赚了约 655 美元",
+      "steps": [
+        "先做等待名单页或预售页（作者说预售更难，要选好）",
+        "去 X 和 Reddit 上主动找人",
+        "定规矩：3 天内等待名单到 25 人以上才开始做，否则换下一个点子",
+        "定期给等待名单发邮件保持热度，作者说这一步最关键",
+        "上线，目标是把约 10% 的等待名单转成付费"
+      ],
+      "key_moves": [
+        "用「3 天 25 人」这种硬门槛决定做不做",
+        "上线前就预估转化率（约 10%），倒推等待名单要多大"
+      ],
+      "borrow": "给下一个想法设一个「3 天 25 人」门槛：在主号发一条演示或预告，3 天内留言要链接或留联系方式的不到 25 个，就先不做。",
+      "pitfalls": "原文没说",
+      "data": "作者自述：上线约 3 周赚了约 655 美元",
+      "why_popular": "",
+      "viewer_moment": "",
+      "stage": "",
+      "stage_norm": "",
+      "idea": "给下一个想法设一个「3 天 25 人」门槛：在主号发一条演示或预告，3 天内留言要链接或留联系方式的不到 25 个，就先不做。",
+      "difficulty": "",
+      "tags": [
+        "等待名单",
+        "验证需求"
+      ],
+      "rating": "待反馈",
+      "hidden": false,
+      "pushed": true,
+      "favorite": false,
+      "doing": false
+    },
+    {
+      "id": "B007",
+      "board": "商业",
+      "subtype": "起步复盘",
+      "batch": null,
+      "business_batch": 1,
+      "date": "2026-11-13",
+      "title": "简单简历：先发给 10 个朋友试，再发一条 X 帖拿到 14.8 万曝光，第一批 2000 元怎么来的",
+      "category": "商业",
+      "category_codes": [],
+      "filter_tags": [
+        "商业",
+        "起步复盘"
+      ],
+      "links": [
+        {
+          "url": "https://vikingz.me/first-300-customers",
+          "label": "vikingz.me"
+        },
+        {
+          "url": "https://docs.easycv.cn/first-2000",
+          "label": "docs.easycv.cn"
+        },
+        {
+          "url": "https://www.v2ex.com/t/888638",
+          "label": "v2ex.com"
+        },
+        {
+          "url": "https://www.v2ex.com/t/896114",
+          "label": "v2ex.com"
+        }
+      ],
+      "published": "作者张轩（V2EX vikingmute），2022-10-15 写最初 300 个用户，2022-11 写第一个 2000 元；两篇 V2EX 帖分别 4528、4424 次浏览",
+      "what": "给程序员和互联网从业者的在线简历工具，卖给找工作的人；10 元/月、66 元/年、188 元/终身，最大的付费点是下载简历",
+      "result": "作者自述：8/19–9/30 注册 220 人、建了 250 份简历、21 人付费（含 3 个终身），付费率接近 10%；到 11/7 累计收入 2000 元。2024-04 他在 V2EX 发帖称月收入达到 2000 元",
+      "steps": [
+        "之前在慕课网做前端课程讲师，在 X、B站、知乎、YouTube、公众号攒了粉，X 约 7000 粉",
+        "从学生「不会写技术简历」的痛点出发，前后做了 7–8 个月",
+        "上线前把链接陆续发给约 10 个互联网从业的朋友试用、挑 bug，拿到第一批用户和信心",
+        "8/19 在 X 发一条帖子配 4 张截图，14.8 万次曝光；粉丝多是程序员，基本是定向投放，转化高",
+        "然后做《半小时视频 + 万字长文教你打造程序员金牌简历》，同时发公众号、知乎、B站、YouTube 和个人网站，带来近 80 个用户、11 个付费",
+        "冷启动渠道逐个试：V2EX 首帖 1976 次点击（流量来源第 3）；知乎投稿到热门问题下 2263 阅读；豆瓣日记 491 阅读；小红书 1928 阅读（不能放链接，他把网址藏在内容里）",
+        "之后公开收入、持续迭代；定期在 X 发真正有用的干货帖并直接带链接，一条 600 多赞的帖子带来 1000 多次访问；保持固定频率曝光，不一次发完"
+      ],
+      "key_moves": [
+        "一开始就定好收费点：免费能做，下载要付费",
+        "帮助文档、更新日志、路线图都做全，让陌生人敢付钱",
+        "写干货顺带推荐产品，不写硬广"
+      ],
+      "borrow": "把小作品的付费点提前想好（比如免费看结果、付费导出高清版），上线先发给 10 个目标用户试，再在主号发一条带 3–4 张截图的干货帖。",
+      "pitfalls": "国内网页产品没有自动续费，月付用户多是买一次就走；公众号文章不能放链接，流量低",
+      "data": "作者自述：8/19–9/30 注册 220 人、建了 250 份简历、21 人付费（含 3 个终身），付费率接近 10%；到 11/7 累计收入 2000 元。2024-04 他在 V2EX 发帖称月收入达到 2000 元",
+      "why_popular": "",
+      "viewer_moment": "",
+      "stage": "",
+      "stage_norm": "",
+      "idea": "把小作品的付费点提前想好（比如免费看结果、付费导出高清版），上线先发给 10 个目标用户试，再在主号发一条带 3–4 张截图的干货帖。",
+      "difficulty": "",
+      "tags": [
+        "中国独立开发",
+        "V2EX",
+        "知乎",
+        "小红书"
+      ],
+      "rating": "待反馈",
+      "hidden": false,
+      "pushed": true,
+      "favorite": false,
+      "doing": false
+    },
+    {
+      "id": "B008",
+      "board": "商业",
+      "subtype": "起步复盘",
+      "batch": null,
+      "business_batch": 1,
+      "date": "2026-11-13",
+      "title": "微信聊天记录可视化：从小红书爆款评论区找到需求，10 个月赚了约 2000 元",
+      "category": "商业",
+      "category_codes": [],
+      "filter_tags": [
+        "商业",
+        "起步复盘"
+      ],
+      "links": [
+        {
+          "url": "https://sspai.com/post/95994",
+          "label": "sspai.com"
+        }
+      ],
+      "published": "少数派 Matrix，2025-02-02，作者 LoneRanger",
+      "what": "一键生成微信聊天记录可视化报告，后来加了 MBTI 聊天报告、AI 嘴替；主要用户是情侣；可以免费试用，第一笔订单 10 元，完整价格表缺失",
+      "result": "作者自述：10 个月约 2000 元（标题）；1300 多人登录过网站，付费不到 300 人",
+      "steps": [
+        "在小红书刷到爆款笔记《当我把和男朋友两年半的聊天记录可视化》，评论区很多人求教程，判断这是需求",
+        "2024-04-05 开始写代码，在一个开源项目上改；2024-05 上线",
+        "新开一个小红书号专门运营，发了 30 多篇笔记，没有爆款，很多篇阅读只有个位数",
+        "小红书铺搜索关键词：情侣礼物、情侣聊天报告；每天看热搜找能结合的角度",
+        "去别人的爆款笔记评论区找潜在用户：试过和博主合作分成、私信（一个号一天只能私信 10 人）、评论（容易被删），最后主要用「挨个给评论的人点赞」，让人好奇回访主页",
+        "同时在 Product Hunt、X、即刻、阮一峰周刊、V2EX 发；参加 AI 比赛进了决赛，主办方的小红书号帮忙宣传，又转化一波",
+        "跟着热点出新模板：小红书 MBTI 话题热，就上线 MBTI 聊天报告"
+      ],
+      "key_moves": [
+        "需求来自小红书爆款评论区里的「求教程」",
+        "推荐流量只有约 3 天，搜索关键词才是长期流量",
+        "评论比点赞收藏更重要：既带推荐，也能直接获客"
+      ],
+      "borrow": "翻自己领域爆款笔记的评论区，抄下 20 条「求教程、求同款」留言当需求清单；下一个小作品先在主号做成同款笔记验证。",
+      "pitfalls": "导出聊天记录要借第三方软件，小白难用；要上传隐私数据，很多人抵触，转化低。作者建议时间分配是找需求 : 营销 : 开发 = 4 : 4 : 2",
+      "data": "作者自述：10 个月约 2000 元（标题）；1300 多人登录过网站，付费不到 300 人",
+      "why_popular": "",
+      "viewer_moment": "",
+      "stage": "",
+      "stage_norm": "",
+      "idea": "翻自己领域爆款笔记的评论区，抄下 20 条「求教程、求同款」留言当需求清单；下一个小作品先在主号做成同款笔记验证。",
+      "difficulty": "",
+      "tags": [
+        "中国独立开发",
+        "小红书",
+        "评论区获客"
+      ],
+      "rating": "待反馈",
+      "hidden": false,
+      "pushed": true,
+      "favorite": false,
+      "doing": false
+    },
+    {
+      "id": "B009",
+      "board": "商业",
+      "subtype": "起步复盘",
+      "batch": null,
+      "business_batch": 1,
+      "date": "2026-11-13",
+      "title": "胃之书：用户发体验笔记就送会员，小红书冷启动，上线当月收入 1.2 万美元",
+      "category": "商业",
+      "category_codes": [],
+      "filter_tags": [
+        "商业",
+        "起步复盘"
+      ],
+      "links": [
+        {
+          "url": "https://news.qq.com/rain/a/20240802A02QLN00",
+          "label": "news.qq.com"
+        },
+        {
+          "url": "https://news.qq.com/rain/a/20250425A04P7900",
+          "label": "news.qq.com"
+        }
+      ],
+      "published": "腾讯新闻「互联网拆解坊」2024-08-02（引用十字路口播客、暗涌、特工宇宙的作者访谈）；暗涌 Waves 2025-04-25",
+      "what": "拍照用 AI 记录饮食的 App，作者赵纯想；免费版每天有额度，拉新可以永久加额度，用完再付费；年会员和永久会员同价 198 元。主力用户是 21–27 岁女性",
+      "result": "作者自述上线当月（5 月）收入 1.2 万美元，App Store 美食佳饮付费榜第 3；拆解作者估算 7 月约 4.7 万元（估算）；七麦预估累计下载约 10 万（估算）",
+      "steps": [
+        "作者是做哲学自媒体的文科生，自己开发",
+        "第一波量来自 X：技术圈朋友帮忙转发，但这批人留存很差（作者自述）",
+        "他觉得「所有平台都要启动」，第一次做小红书，没想到受到广泛关注",
+        "评论区「基本做到每一条都会回复」",
+        "增长飞轮：发布胃之书体验图文的人，都可以到他评论区领会员；发的人越多，来领的人越多，他的帖子点赞和评论就越多（暗涌报道的版本：AI 识别笔记点赞过 3 即可获得免费会员）",
+        "产品里设计付费路径：额度用完 → 拉新加额度 → 付费；年会员和永久会员同价，引导买永久",
+        "每天中午用 AI 生成推送文案，拉次日留存（作者称次留近 50%，后来 59%）"
+      ],
+      "key_moves": [
+        "「晒图换会员」把用户变成发笔记的人",
+        "评论区每条都回，提高帖子热度",
+        "用同价锚点推高价档"
+      ],
+      "borrow": "给自己的小作品设计一个「晒图换福利」：用户发带作品截图的笔记，就送一次高级版或定制，先在主号试一轮，数一数换来多少篇自来水。",
+      "pitfalls": "拆解作者认为它是「一波流」：7 月后小红书新笔记降到个位数，太依赖单一渠道，留存也在下滑",
+      "data": "作者自述上线当月（5 月）收入 1.2 万美元，App Store 美食佳饮付费榜第 3；拆解作者估算 7 月约 4.7 万元（估算）；七麦预估累计下载约 10 万（估算）",
+      "why_popular": "",
+      "viewer_moment": "",
+      "stage": "",
+      "stage_norm": "",
+      "idea": "给自己的小作品设计一个「晒图换福利」：用户发带作品截图的笔记，就送一次高级版或定制，先在主号试一轮，数一数换来多少篇自来水。",
+      "difficulty": "",
+      "tags": [
+        "中国独立开发",
+        "小红书",
+        "AI 应用",
+        "裂变"
+      ],
+      "rating": "待反馈",
+      "hidden": false,
+      "pushed": true,
+      "favorite": false,
+      "doing": false
+    },
+    {
+      "id": "B010",
+      "board": "商业",
+      "subtype": "起步复盘",
+      "batch": null,
+      "business_batch": 1,
+      "date": "2026-11-13",
+      "title": "ByePhotos：V2EX 首发限免没起量，一篇「我怎么从 0 做 App」的小红书笔记让月收入破 2500 美元",
+      "category": "商业",
+      "category_codes": [],
+      "filter_tags": [
+        "商业",
+        "起步复盘"
+      ],
+      "links": [
+        {
+          "url": "https://www.v2ex.com/t/1095948",
+          "label": "v2ex.com"
+        },
+        {
+          "url": "https://www.yeyulingfeng.com/179721.html",
+          "label": "yeyulingfeng.com"
+        },
+        {
+          "url": "https://www.yeyulingfeng.com/278671.html",
+          "label": "yeyulingfeng.com"
+        }
+      ],
+      "published": "V2EX 首发帖 2024-12-08（PanicByte，4210 次浏览）；后两条是作者小红书笔记的转载（2025-06、2025-11），小红书原笔记链接缺失",
+      "what": "iOS 相册清理 App：找相似照片、按体积看视频、压缩视频、手势整理相册；有终身会员，价格缺失",
+      "result": "作者自述：早期每月一两百美元；2025 年 4 月发了一篇小红书笔记，一个月后评分数从 150 涨到 332，5 月收入超过 2500 美元；双十一给终身会员打折，首日收入超过 1000 元",
+      "steps": [
+        "自己手机总是存储爆满，用业余时间两个月做完第一版",
+        "2024-12-08 在 V2EX 首发，「上架首发三天限免」，评论区收到一堆功能建议",
+        "又在其他论坛推、做限免、做 App Store 搜索优化，有下载但每月只有一两百美元",
+        "2025 年 4 月发一篇小红书笔记，只讲从 0 做 App 的过程和踩的坑，没写什么运营技巧",
+        "收到 99+ 通知，很多人试用并提需求，他照着建议连更了两个版本",
+        "双十一给终身会员做限时折扣"
+      ],
+      "key_moves": [
+        "讲真实的开发故事，比硬广有用",
+        "把评论区的需求做进下一版",
+        "用节日给终身会员打折"
+      ],
+      "borrow": "给已经做好的小作品写一篇「我是怎么从 0 做出它的」故事笔记，放踩坑和过程截图，不放购买引导，看评论区有多少人要链接。",
+      "pitfalls": "原文没说。V2EX 评论里有人担心是否联网上传照片，也有人因为要求 iOS 17 以上装不了",
+      "data": "作者自述：早期每月一两百美元；2025 年 4 月发了一篇小红书笔记，一个月后评分数从 150 涨到 332，5 月收入超过 2500 美元；双十一给终身会员打折，首日收入超过 1000 元",
+      "why_popular": "",
+      "viewer_moment": "",
+      "stage": "",
+      "stage_norm": "",
+      "idea": "给已经做好的小作品写一篇「我是怎么从 0 做出它的」故事笔记，放踩坑和过程截图，不放购买引导，看评论区有多少人要链接。",
+      "difficulty": "",
+      "tags": [
+        "中国独立开发",
+        "小红书",
+        "V2EX",
+        "App"
+      ],
+      "rating": "待反馈",
+      "hidden": false,
+      "pushed": true,
+      "favorite": false,
+      "doing": false
+    },
+    {
+      "id": "B011",
+      "board": "商业",
+      "subtype": "卖货·小红书",
+      "batch": null,
+      "business_batch": 1,
+      "date": "2026-11-13",
+      "title": "小红书卖模板、课件、壁纸：2026 年起要先过「电子资源定向准入」",
+      "category": "商业",
+      "category_codes": [],
+      "filter_tags": [
+        "商业",
+        "卖货·小红书"
+      ],
+      "links": [
+        {
+          "url": "https://alishui.com/article/100512/xiao-hong-shu-dian-zi-zi-yuan-jing-ying-zhi-nan-ding-xiang-zhun-ru-zi-zhi-yao-qiu-yu-bao-zheng-jin-quan-jie-xi.html",
+          "label": "alishui.com"
+        },
+        {
+          "url": "https://www.xiuxai.com/relay-index/articles/virtual-goods-monetization-model-breakdown",
+          "label": "xiuxai.com"
+        },
+        {
+          "url": "https://www.jianpian.cn/a/1eyhr5us",
+          "label": "jianpian.cn"
+        }
+      ],
+      "published": "满银网对《小红书电子资源定向准入及退出规则》的解读（日期缺失）；信息杂货铺 2026-10-01 更新；简篇开店教程 2025-07-14（旧规则）",
+      "what": "小红书上的电子资源，只剩三个二级类目：PPT/简历/其他模版、课件/教案/手抄报、头像壁纸",
+      "result": "平台规则，没有收入数据。信息杂货铺称新规 2026 年 2 月公示修订并执行；官方规则原文这次没直接打开，以商家后台为准",
+      "steps": [
+        "先确认你卖的东西是不是「电子资源」，以及是否在那三个类目里；书籍、真题、软件、影音、盗版资料都禁售（信息杂货铺）",
+        "个人店门槛：入驻满 180 天、发笔记超过 30 篇、粉丝超过 1000、没有恶意违规",
+        "再交一份流水证明，二选一：第三方平台近 12 个月任一自然月流水超过 6000 元（店铺主体一致、运营一年以上），或小红书 2025 年任一自然月电子资源流水超过 6000 元",
+        "签《合规经营承诺函（电子资源）》；原创要能拿出创作过程截图或源文件，用了别人的肖像或元素要有授权",
+        "保证金：电子资源类目个人店 10000 元，另有按月流水浮动的保证金；店铺分 4.7 以上确认收货后 4 天结算，否则 10 天（满银网整理）",
+        "开店入口和发货（2025 年教程，入口可能有变）：我 → 创作中心 → 更多服务 → 开通店铺 → 个人店；物流选「无物流发货」；成交和发链接都走店铺，私信发链接会被处罚",
+        "引流：笔记发「资料片段 + 痛点」，引导进店"
+      ],
+      "key_moves": [
+        "门槛本身就是 1000 粉、30 篇笔记，所以先把号做起来再谈开店",
+        "原创作品从第一天就留创作过程证据",
+        "2025 年的老教程（个人店 0 元开、保证金 1000 元）不适用于电子资源类目，别照抄"
+      ],
+      "borrow": "先别急着开店。把想卖的模板或素材在主号当免费福利发 3–5 篇，记下收藏数和要链接的人数，同时把创作过程录屏存好，给以后申请类目留证据。",
+      "pitfalls": "网传「2026-04-15 起个人店全面禁售电子资源」，信息杂货铺称找不到官方原文；平台规则变化快，动手前到商家后台核对",
+      "data": "平台规则，没有收入数据。信息杂货铺称新规 2026 年 2 月公示修订并执行；官方规则原文这次没直接打开，以商家后台为准",
+      "why_popular": "",
+      "viewer_moment": "",
+      "stage": "",
+      "stage_norm": "",
+      "idea": "先别急着开店。把想卖的模板或素材在主号当免费福利发 3–5 篇，记下收藏数和要链接的人数，同时把创作过程录屏存好，给以后申请类目留证据。",
+      "difficulty": "",
+      "tags": [
+        "小红书开店",
+        "虚拟商品",
+        "平台规则"
+      ],
+      "rating": "待反馈",
+      "hidden": false,
+      "pushed": true,
+      "favorite": false,
+      "doing": false
+    },
+    {
+      "id": "B012",
+      "board": "商业",
+      "subtype": "卖货·闲鱼",
+      "batch": null,
+      "business_batch": 1,
+      "date": "2026-11-13",
+      "title": "闲鱼挂定制服务和虚拟品：先记住这几条扣分线",
+      "category": "商业",
+      "category_codes": [],
+      "filter_tags": [
+        "商业",
+        "卖货·闲鱼"
+      ],
+      "links": [
+        {
+          "url": "https://xygj.pro/website/content?article_id=498832766117253&category_id=220001&title=%E7%A4%BE%E5%8C%BA%E8%A7%84%E5%88%99&type=22",
+          "label": "xygj.pro"
+        },
+        {
+          "url": "https://xygj.pro/website/content?article_id=498767719605573&category_id=220001&title=%E7%A4%BE%E5%8C%BA%E8%A7%84%E5%88%99&type=22",
+          "label": "xygj.pro"
+        },
+        {
+          "url": "https://www.xiuxai.com/relay-index/articles/virtual-goods-monetization-model-breakdown",
+          "label": "xiuxai.com"
+        }
+      ],
+      "published": "闲管家转载的《闲鱼社区管理规范》（最新修订 2023-06-01）和「描述不符全额退」规范（2023-03-23 生效）；服务费数据来自信息杂货铺 2026-10-01 整理",
+      "what": "在闲鱼挂服务类、卡券类等虚拟商品，比如定制、代做",
+      "result": "平台规则，没有收入数据",
+      "steps": [
+        "完成实名认证和实人认证，才能发布和交易",
+        "商品里写清服务内容、交付方式、使用周期、承诺交付时间和效果；写不清或做不到算「描述不当」，严重的每次扣 20 分",
+        "不要在商品、私聊、头像、主页背景里放微信、QQ、二维码、外部链接，引导站外交易一般扣 1 分，严重 20 分，特别严重 100 分",
+        "不刷单、不刷赞，否则算「扰乱平台秩序」",
+        "虚拟服务可以开「描述不符全额退」：买家确认收货前发起，72 小时内要响应；收货后发起，48 小时内要响应，超时系统自动退款；买家收货后 60 天内都能申请，举证只认闲鱼站内聊天",
+        "费用：普通个人卖家软件服务费 0.6%、单笔封顶 60 元；开通「鱼小铺」的专业卖家 1.6%、上不封顶（2026-04-18 生效，信息杂货铺整理）",
+        "卖侵权或盗版：同一自然年被权利人投诉 3 次，扣 100 分并永久限制账号"
+      ],
+      "key_moves": [
+        "交付范围写在商品页，比在聊天里口头约定更能保护自己",
+        "所有沟通留在闲鱼站内，出了纠纷才有证据",
+        "高频卖再考虑鱼小铺，先算服务费"
+      ],
+      "borrow": "如果要在闲鱼挂定制服务，先写一段固定说明：交付什么、几天交、改几次、不包含什么。所有沟通都留在闲鱼聊天里。",
+      "pitfalls": "闲管家页面是第三方工具转载的规则原文；闲鱼规则会更新，以 App 内规则中心为准",
+      "data": "平台规则，没有收入数据",
+      "why_popular": "",
+      "viewer_moment": "",
+      "stage": "",
+      "stage_norm": "",
+      "idea": "如果要在闲鱼挂定制服务，先写一段固定说明：交付什么、几天交、改几次、不包含什么。所有沟通都留在闲鱼聊天里。",
+      "difficulty": "",
+      "tags": [
+        "闲鱼",
+        "平台规则",
+        "定制服务"
+      ],
+      "rating": "待反馈",
+      "hidden": false,
+      "pushed": true,
+      "favorite": false,
+      "doing": false
+    },
+    {
+      "id": "B013",
+      "board": "商业",
+      "subtype": "卖货·闲鱼",
+      "batch": null,
+      "business_batch": 1,
+      "date": "2026-11-13",
+      "title": "卖虚拟资料的真实账本：多数人月入 300–2000 元，活下来的在卖「解决方案」",
+      "category": "商业",
+      "category_codes": [],
+      "filter_tags": [
+        "商业",
+        "卖货·闲鱼"
+      ],
+      "links": [
+        {
+          "url": "https://www.xiuxai.com/relay-index/articles/virtual-goods-monetization-model-breakdown",
+          "label": "xiuxai.com"
+        }
+      ],
+      "published": "信息杂货铺专题，2026-10-01 更新，约 6500 字，汇总知乎、虎嗅、平台公示和最高法意见",
+      "what": "小红书和闲鱼上的虚拟资料：壁纸头像、PPT 模板、考试资料、电子书等，定价大多 10–70 元",
+      "result": "文中所有收入案例都是卖家自述、没有第三方核验。多数人月入 300–2000 元；平台侧口径称闲鱼卖家月均成交约 897 元；一份 200G 资料包 9.9 元卖 1100 份收入 1 万多，但整理花 30–50 小时，时薪不到 20 元",
+      "steps": [
+        "先选人群，不是选文件：有刚需、愿意付钱、还会复购的人",
+        "卖具体结果：通用 PPT 模板 9.9 元一个月卖不到 10 份，换成给培训机构招生老师的《秋季招生宣讲 PPT 组合包》定价 399 元反而卖爆（作者有卖课立场，数字没法核验）",
+        "用自己原创或已授权的内容；用 AI 生产要深度加工，保留提示词和迭代记录，按规定标注 AI 生成",
+        "用「资料 + 使用指南 + 答疑 + 定制」提高客单价，减少售后纠纷",
+        "把它当成测试流量和付费意愿的实验，不当成稳定生意"
+      ],
+      "key_moves": [
+        "垂直细分、人设信任、服务溢价，是 AI 抄不走的三样东西",
+        "远离 K12 教材、正版书影印、未授权网课、品牌 LOGO、明星肖像和知名动漫 IP",
+        "别买「教你卖资料」的课，凡是要先垫资、交解冻金的基本是骗局"
+      ],
+      "borrow": "只卖自己原创的「方案包」：一个模板 + 一页使用说明 + 一次答疑，标题写给一个具体人群，先在主号发免费版看反应。",
+      "pitfalls": "版权风险。有卖家 3.9 元卖考研教程两三个月赚 70 元，半年后被索赔 1 万元、私了 3000 元（当事人自述）。2026-09-07 最高法意见明确「是 AI 生成的」不能免除侵权责任；2025-09-01 起 AI 生成内容要加标识",
+      "data": "文中所有收入案例都是卖家自述、没有第三方核验。多数人月入 300–2000 元；平台侧口径称闲鱼卖家月均成交约 897 元；一份 200G 资料包 9.9 元卖 1100 份收入 1 万多，但整理花 30–50 小时，时薪不到 20 元",
+      "why_popular": "",
+      "viewer_moment": "",
+      "stage": "",
+      "stage_norm": "",
+      "idea": "只卖自己原创的「方案包」：一个模板 + 一页使用说明 + 一次答疑，标题写给一个具体人群，先在主号发免费版看反应。",
+      "difficulty": "",
+      "tags": [
+        "虚拟资料",
+        "版权",
+        "闲鱼",
+        "小红书"
+      ],
+      "rating": "待反馈",
+      "hidden": false,
+      "pushed": true,
+      "favorite": false,
+      "doing": false
+    },
+    {
+      "id": "B014",
+      "board": "商业",
+      "subtype": "卖货·海外",
+      "batch": null,
+      "business_batch": 1,
+      "date": "2026-11-13",
+      "title": "Product Hunt 官方：发布前几周就要开始准备，绝对不能求点赞",
+      "category": "商业",
+      "category_codes": [],
+      "filter_tags": [
+        "商业",
+        "卖货·海外"
+      ],
+      "links": [
+        {
+          "url": "https://help.producthunt.com/en/articles/17734384-5-how-to-promote-your-launch-and-what-to-avoid",
+          "label": "help.producthunt.com"
+        }
+      ],
+      "published": "Product Hunt 帮助中心「Launch Guide」第 5 篇，页面显示一周多前更新",
+      "what": "在 Product Hunt 发布产品，面向开发者、产品经理和早期用户",
+      "result": "官方指南，没有收入数据。案例：TypingMind 靠 X 粉丝和 newsletter 拿到当日第 1（见 B003），ShipFast 当日第 2（见 B002）",
+      "steps": [
+        "提前几周在 Product Hunt 上活跃：评论别人的发布、在论坛回答问题、帮其他创作者",
+        "站外也边做边分享：进度、卡点、做了什么决定，让人有理由跟着看",
+        "排期或存草稿后，用 pre-launch dashboard 拿发布链接、给网站加徽章、在论坛开帖预告",
+        "提前告诉团队、用户和 newsletter 订阅者发布日期；邮件、社媒帖、站内横幅都提前写好",
+        "网站准备：挂 Product Hunt 徽章，做一个只有一个明确按钮的落地页，有专属优惠就放最显眼的位置",
+        "发布当天：在受众已经在的地方发链接，比如邮件、X、LinkedIn、自己的 Slack 或 Discord；从没发过帖的社区不要去丢链接",
+        "请大家「试用、评论、给反馈」"
+      ],
+      "key_moves": [
+        "发布日的票数来自前几周攒的关系，不是当天拉的",
+        "有个性的内容比一句「我们上线了」传得更远"
+      ],
+      "borrow": "小作品要发 Product Hunt 的话，提前 3 周在主号和 X 上每周发一次进度，同时攒一份愿意当天来试用的名单（邮箱或私信）。",
+      "pitfalls": "红线：不能求点赞，不能搞和点赞挂钩的抽奖，不能买票或买评论，不能群发私信或用爬来的邮箱，不能用小号，违反会被下架甚至封号",
+      "data": "官方指南，没有收入数据。案例：TypingMind 靠 X 粉丝和 newsletter 拿到当日第 1（见 B003），ShipFast 当日第 2（见 B002）",
+      "why_popular": "",
+      "viewer_moment": "",
+      "stage": "",
+      "stage_norm": "",
+      "idea": "小作品要发 Product Hunt 的话，提前 3 周在主号和 X 上每周发一次进度，同时攒一份愿意当天来试用的名单（邮箱或私信）。",
+      "difficulty": "",
+      "tags": [
+        "Product Hunt",
+        "海外发布"
+      ],
+      "rating": "待反馈",
+      "hidden": false,
+      "pushed": true,
+      "favorite": false,
+      "doing": false
+    },
+    {
+      "id": "B015",
+      "board": "商业",
+      "subtype": "卖货·海外",
+      "batch": null,
+      "business_batch": 1,
+      "date": "2026-11-13",
+      "title": "Gumroad 官方：产品还没做好，就能用等待名单和订阅页收邮箱",
+      "category": "商业",
+      "category_codes": [],
+      "filter_tags": [
+        "商业",
+        "卖货·海外"
+      ],
+      "links": [
+        {
+          "url": "https://gumroad.com/help/article/170-audience",
+          "label": "gumroad.com"
+        }
+      ],
+      "published": "Gumroad 帮助中心「Starting an email newsletter」，日期缺失",
+      "what": "在 Gumroad 卖数字产品（模板、电子书、素材包等），面向海外买家",
+      "result": "官方指南，没有收入数据。案例：Easlo 先免费发模板收邮箱，开始收费时第一封邮件发给免费下载用户（见 B004）",
+      "steps": [
+        "不用先有产品，就有订阅页：你的用户名.gumroad.com/subscribe",
+        "给还没发布的产品打开「Let people join a waitlist」，把等待名单表单嵌到自己网站；加入等待名单的人自动成为订阅者",
+        "用 Workflows 设置自动邮件，比如订阅后 0 小时发一封欢迎信",
+        "发邮件时可以选只发订阅者、只发买家，或者全部",
+        "门槛：扣费后赚满 100 美元并完成一次提现之前，不能群发邮件",
+        "不能导入外部邮箱名单；变通办法是做一个 100% 折扣码让老粉「免费购买」，他们就进了买家列表"
+      ],
+      "key_moves": [
+        "0 元产品或 100% 折扣码本身就是留邮箱的工具",
+        "第一款付费品要早点上，赚满 100 美元才能群发邮件"
+      ],
+      "borrow": "在 Gumroad 放一个 0 元的小模板，链接挂在 X 主页上攒订阅者；同时早点上一个便宜的付费款，先把群发邮件的门槛跨过去。",
+      "pitfalls": "账号审核通过前，订阅页可能会弹人机验证，嵌到外站的表单暂时不能用",
+      "data": "官方指南，没有收入数据。案例：Easlo 先免费发模板收邮箱，开始收费时第一封邮件发给免费下载用户（见 B004）",
+      "why_popular": "",
+      "viewer_moment": "",
+      "stage": "",
+      "stage_norm": "",
+      "idea": "在 Gumroad 放一个 0 元的小模板，链接挂在 X 主页上攒订阅者；同时早点上一个便宜的付费款，先把群发邮件的门槛跨过去。",
+      "difficulty": "",
+      "tags": [
+        "Gumroad",
+        "邮件列表",
+        "等待名单"
+      ],
+      "rating": "待反馈",
+      "hidden": false,
+      "pushed": true,
+      "favorite": false,
+      "doing": false
+    },
     {
       "id": "S142",
       "batch": 23,
@@ -64,7 +989,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S141",
@@ -118,7 +1044,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S140",
@@ -176,7 +1103,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S139",
@@ -234,7 +1162,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S138",
@@ -288,7 +1217,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S137",
@@ -337,7 +1267,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S136",
@@ -383,7 +1314,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S135",
@@ -437,7 +1369,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S134",
@@ -487,7 +1420,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S133",
@@ -525,7 +1459,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S132",
@@ -572,7 +1507,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S131",
@@ -623,7 +1559,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S130",
@@ -664,7 +1601,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S129",
@@ -712,7 +1650,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S128",
@@ -754,7 +1693,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S127",
@@ -798,7 +1738,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S126",
@@ -854,7 +1795,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S125",
@@ -890,7 +1832,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S124",
@@ -924,7 +1867,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S123",
@@ -961,7 +1905,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S122",
@@ -993,7 +1938,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S121",
@@ -1029,7 +1975,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S120",
@@ -1061,7 +2008,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S119",
@@ -1097,7 +2045,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S118",
@@ -1138,7 +2087,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S117",
@@ -1175,7 +2125,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S116",
@@ -1216,7 +2167,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S115",
@@ -1257,7 +2209,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S114",
@@ -1289,7 +2242,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S113",
@@ -1327,7 +2281,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S112",
@@ -1364,7 +2319,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S111",
@@ -1404,7 +2360,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S110",
@@ -1443,7 +2400,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S109",
@@ -1483,7 +2441,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S108",
@@ -1521,7 +2480,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S107",
@@ -1561,7 +2521,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S106",
@@ -1599,7 +2560,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S105",
@@ -1639,7 +2601,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S104",
@@ -1677,7 +2640,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S103",
@@ -1713,7 +2677,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S102",
@@ -1749,7 +2714,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S101",
@@ -1786,7 +2752,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S100",
@@ -1821,7 +2788,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S099",
@@ -1858,7 +2826,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S098",
@@ -1903,7 +2872,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S097",
@@ -1949,7 +2919,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S096",
@@ -2000,7 +2971,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S095",
@@ -2032,7 +3004,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S094",
@@ -2064,7 +3037,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S093",
@@ -2104,7 +3078,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S092",
@@ -2140,7 +3115,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S091",
@@ -2180,7 +3156,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S090",
@@ -2223,7 +3200,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S089",
@@ -2259,7 +3237,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S088",
@@ -2301,7 +3280,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S087",
@@ -2338,7 +3318,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S086",
@@ -2400,7 +3381,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S085",
@@ -2440,7 +3422,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S084",
@@ -2484,7 +3467,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S083",
@@ -2521,7 +3505,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S082",
@@ -2559,7 +3544,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S081",
@@ -2600,7 +3586,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S080",
@@ -2646,7 +3633,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S079",
@@ -2680,7 +3668,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S078",
@@ -2719,7 +3708,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S077",
@@ -2755,7 +3745,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S076",
@@ -2790,7 +3781,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S075",
@@ -2829,7 +3821,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S074",
@@ -2880,7 +3873,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S073",
@@ -2915,7 +3909,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S072",
@@ -2955,7 +3950,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S071",
@@ -2993,7 +3989,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S070",
@@ -3029,7 +4026,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S069",
@@ -3066,7 +4064,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S068",
@@ -3110,7 +4109,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S067",
@@ -3145,7 +4145,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S066",
@@ -3186,7 +4187,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S065",
@@ -3228,7 +4230,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S064",
@@ -3263,7 +4266,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S063",
@@ -3298,7 +4302,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S062",
@@ -3339,7 +4344,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S061",
@@ -3381,7 +4387,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S060",
@@ -3422,7 +4429,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S059",
@@ -3461,7 +4469,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S058",
@@ -3495,7 +4504,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S057",
@@ -3533,7 +4543,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S056",
@@ -3570,7 +4581,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S055",
@@ -3621,7 +4633,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S054",
@@ -3656,7 +4669,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S053",
@@ -3690,7 +4704,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S052",
@@ -3727,7 +4742,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S051",
@@ -3763,7 +4779,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S050",
@@ -3797,7 +4814,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S049",
@@ -3834,7 +4852,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S048",
@@ -3869,7 +4888,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S047",
@@ -3905,7 +4925,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S046",
@@ -3942,7 +4963,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S045",
@@ -3976,7 +4998,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S044",
@@ -4010,7 +5033,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S043",
@@ -4052,7 +5076,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S032",
@@ -4079,7 +5104,8 @@
       "hidden": false,
       "pushed": false,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S030",
@@ -4106,7 +5132,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S029",
@@ -4139,7 +5166,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S028",
@@ -4172,7 +5200,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S027",
@@ -4210,7 +5239,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S026",
@@ -4238,7 +5268,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S025",
@@ -4265,7 +5296,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S024",
@@ -4303,7 +5335,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S023",
@@ -4335,7 +5368,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S022",
@@ -4377,7 +5411,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S021",
@@ -4420,7 +5455,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S017",
@@ -4453,7 +5489,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S031",
@@ -4488,7 +5525,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S020",
@@ -4527,7 +5565,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S019",
@@ -4559,7 +5598,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S018",
@@ -4598,7 +5638,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S016",
@@ -4636,7 +5677,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S015",
@@ -4671,7 +5713,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S014",
@@ -4706,7 +5749,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S040",
@@ -4751,7 +5795,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S039",
@@ -4794,7 +5839,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S038",
@@ -4828,7 +5874,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S037",
@@ -4866,7 +5913,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S036",
@@ -4900,7 +5948,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S042",
@@ -4938,7 +5987,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S013",
@@ -4982,7 +6032,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S012",
@@ -5019,7 +6070,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S011",
@@ -5051,7 +6103,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S010",
@@ -5082,7 +6135,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     },
     {
       "id": "S006",
@@ -5110,7 +6164,8 @@
       "hidden": false,
       "pushed": true,
       "favorite": false,
-      "doing": false
+      "doing": false,
+      "board": "素材"
     }
   ]
 }

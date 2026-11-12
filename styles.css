@@ -395,4 +395,77 @@ a { color: var(--accent); }
   text-align: center;
 }
 
+
+/* ---- 商业板块 ---- */
+.chips.boards .chip { font-size: 14px; padding: 8px 15px; font-weight: 500; }
+.chips.boards .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fffaf3; }
+.chips.subtypes .chip[aria-pressed="true"] { background: var(--sage); border-color: var(--sage); }
+.card.biz { border-top: 3px solid var(--sage); }
+.pill.sub { background: #e4eedc; color: #3f6b58; }
+.pill.sub-卖货-小红书 { background: #fbe0e0; color: #a33a3a; }
+.pill.sub-卖货-闲鱼 { background: #fff0c9; color: #8a5a22; }
+.pill.sub-卖货-海外 { background: #dce8f2; color: #35587a; }
+.pill.sub-商业思路 { background: #ece3f3; color: #5d3f78; }
+.biz-result, .biz-borrow {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #4c3d34;
+}
+.biz-result b, .biz-borrow b {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 11px;
+  color: var(--sage);
+  letter-spacing: 0.04em;
+}
+.biz-borrow { background: #f3f7ef; border-radius: 12px; padding: 8px 10px; }
+.timeline {
+  list-style: none;
+  margin: 4px 0 6px;
+  padding: 0;
+  position: relative;
+}
+.timeline li {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 10px;
+  position: relative;
+  padding: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 24px;
+  bottom: 0;
+  width: 2px;
+  background: #dfe8d8;
+}
+.timeline li:last-child::before { display: none; }
+.timeline li:last-child { padding-bottom: 2px; }
+.step-n {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--sage);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.timeline.mini li { font-size: 12.5px; padding-bottom: 8px; gap: 8px; grid-template-columns: 20px 1fr; color: #4c3d34; }
+.timeline.mini li::before { left: 9px; top: 20px; }
+.timeline.mini .step-n { width: 20px; height: 20px; font-size: 11px; }
+.step-more { margin: 0 0 10px 28px; font-size: 12px; color: var(--muted); }
+.moves { margin: 0; padding-left: 1.2em; line-height: 1.7; font-size: 14.5px; }
+.moves li { margin-bottom: 4px; }
+.field.borrow { background: #f3f7ef; border-radius: 14px; padding: 12px 14px; }
+.field.borrow h3 { color: var(--sage); }
+
 [hidden] { display: none !important; }

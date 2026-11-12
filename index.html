@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,650;1,6..72,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=3" />
+  <link rel="stylesheet" href="./styles.css?v=4" />
 </head>
 <body>
   <a class="skip" href="#feed">跳到卡片列表</a>
@@ -26,7 +26,7 @@
     <div class="hero-inner">
       <p class="eyebrow">Daily sparks</p>
       <h1>每日灵感</h1>
-      <p class="lede">像刷小红书一样翻素材。点开一张卡，能看到它为什么火、观众那一刻在想什么，以及可以做成什么。</p>
+      <p class="lede">像刷小红书一样翻素材。点开一张卡，能看到它为什么火、观众那一刻在想什么，以及可以做成什么。「商业」板块收别人从零赚到钱的路径和卖货方法。</p>
       <div class="search-box">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         <input id="search" type="search" placeholder="搜索标题、灵感、链接或编号…" autocomplete="off" />
@@ -35,7 +35,9 @@
   </header>
 
   <div class="sticky-bar">
+    <div class="chips boards" id="boardChips" role="tablist" aria-label="板块"></div>
     <div class="chips marks" id="markChips" role="tablist" aria-label="我的收藏"></div>
+    <div class="chips subtypes" id="subtypeChips" role="tablist" aria-label="商业子类" hidden></div>
     <div class="chips" id="catChips" role="tablist" aria-label="分类"></div>
     <div class="chips stages" id="stageChips" role="tablist" aria-label="阶段"></div>
     <div class="toolbar">
@@ -83,6 +85,6 @@
     </div>
   </div>
   <div id="toast" class="toast" hidden></div>
-  <script src="./app.js?v=3"></script>
+  <script src="./app.js?v=4"></script>
 </body>
 </html>

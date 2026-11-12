@@ -969,11 +969,208 @@ def finalize(items: dict[str, dict]) -> list[dict]:
     return finalized
 
 
+
+# ---------------------------------------------------------------------------
+# 商业库 (B items)
+# ---------------------------------------------------------------------------
+
+BUSINESS_SUBTYPES = ["起步复盘", "卖货·小红书", "卖货·闲鱼", "卖货·海外", "商业思路"]
+
+BUSINESS_FIELD_MAP = {
+    "子类": "subtype",
+    "类型": "subtype",
+    "来源": "links_text",
+    "发布": "published",
+    "卖什么": "what",
+    "结果": "result",
+    "起步路径": "steps",
+    "步骤": "steps",
+    "怎么做": "steps",
+    "关键动作": "key_moves",
+    "能借的一步": "borrow",
+    "唯果能借的一步": "borrow",
+    "坑": "pitfalls",
+    "坑/注意": "pitfalls",
+    "注意": "pitfalls",
+    "收录": "date",
+    "标签": "tags_text",
+}
+BUSINESS_LIST_FIELDS = {"steps", "key_moves"}
+
+
+def parse_business(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    text = path.read_text(encoding="utf-8")
+    items: list[dict] = []
+    batch = None
+    current = None
+    current_key = None
+
+    def finish():
+        nonlocal current
+        if current:
+            items.append(current)
+        current = None
+
+    for raw in text.splitlines():
+        line = raw.rstrip()
+        stripped = line.strip()
+        mb = re.match(r"^##\s+商业第\s*(\d+)\s*批", stripped)
+        if mb:
+            batch = int(mb.group(1))
+            continue
+        mh = re.match(r"^###\s+(B\d{3})\s+(.+)$", stripped)
+        if mh:
+            finish()
+            current = {
+                "id": mh.group(1), "title": mh.group(2).strip(), "business_batch": batch,
+                "subtype": "", "links_text": "", "published": "", "what": "", "result": "",
+                "steps": [], "key_moves": [], "borrow": "", "pitfalls": "", "date": None,
+                "tags_text": "",
+            }
+            current_key = None
+            continue
+        if current is None:
+            continue
+        if stripped.startswith("## ") or stripped == "---":
+            finish()
+            current_key = None
+            continue
+        msub = re.match(r"^\s{2,}(?:\d+[.、]|[-*])\s+(.+)$", line)
+        if msub and current_key in BUSINESS_LIST_FIELDS:
+            current[current_key].append(msub.group(1).strip())
+            continue
+        mf = re.match(r"^-\s*([^：:]{1,8})[：:]\s*(.*)$", stripped)
+        if mf and mf.group(1).strip() in BUSINESS_FIELD_MAP:
+            key = BUSINESS_FIELD_MAP[mf.group(1).strip()]
+            value = mf.group(2).strip()
+            current_key = key
+            if key in BUSINESS_LIST_FIELDS:
+                if value:
+                    current[key].append(value)
+            elif key == "date":
+                current["date"] = parse_date(value) or value
+            else:
+                current[key] = (current[key] + " " + value).strip() if current[key] else value
+            continue
+        if msub and current_key and current_key not in BUSINESS_LIST_FIELDS:
+            current[current_key] = (current[current_key] + " " + msub.group(1).strip()).strip()
+    finish()
+    return items
+
+
+def finalize_business(raw_items: list[dict]) -> list[dict]:
+    ratings_file = load_json_overlay(DATA_DIR / "ratings.json")
+    out = []
+    for raw in raw_items:
+        bid = raw["id"]
+        subtype = scrub(raw.get("subtype") or "")
+        if subtype not in BUSINESS_SUBTYPES:
+            subtype = "起步复盘" if "复盘" in subtype else (subtype or "起步复盘")
+        rating, favorite, doing = "待反馈", False, False
+        if bid in ratings_file:
+            rt, fav, dg = parse_rating_entry(ratings_file[bid])
+            if rt:
+                rating = normalize_rating(rt)
+            if fav is not None:
+                favorite = bool(fav)
+            if dg is not None:
+                doing = bool(dg)
+        tags = [scrub(t) for t in parse_tags(raw.get("tags_text") or "") if scrub(t)]
+        hidden = rating == "pass"
+        out.append({
+            "id": bid,
+            "board": "商业",
+            "subtype": subtype,
+            "batch": None,
+            "business_batch": raw.get("business_batch"),
+            "date": raw.get("date"),
+            "title": scrub(raw.get("title") or bid),
+            "category": "商业",
+            "category_codes": [],
+            "filter_tags": ["商业", subtype],
+            "links": links_as_objects(extract_urls(raw.get("links_text") or "")),
+            "published": scrub(raw.get("published") or ""),
+            "what": scrub(raw.get("what") or ""),
+            "result": scrub(raw.get("result") or ""),
+            "steps": [scrub(x) for x in raw.get("steps") or [] if scrub(x)],
+            "key_moves": [scrub(x) for x in raw.get("key_moves") or [] if scrub(x)],
+            "borrow": scrub(raw.get("borrow") or ""),
+            "pitfalls": scrub(raw.get("pitfalls") or ""),
+            "data": scrub(raw.get("result") or ""),
+            "why_popular": "",
+            "viewer_moment": "",
+            "stage": "",
+            "stage_norm": "",
+            "idea": scrub(raw.get("borrow") or ""),
+            "difficulty": "",
+            "tags": tags,
+            "rating": rating,
+            "hidden": hidden,
+            "pushed": True,
+            "favorite": favorite,
+            "doing": doing,
+        })
+    out.sort(key=lambda it: (it.get("date") or "", -int(re.sub(r"\D", "", it["id"]) or 0)), reverse=True)
+    return out
+
+
+def render_business_md(items: list[dict]) -> list[str]:
+    visible = [it for it in items if not it.get("hidden")]
+    if not visible:
+        return []
+    lines = [
+        "",
+        "# 商业库",
+        "",
+        f"> 共 {len(visible)} 条。别人公开分享的赚钱路径（起步复盘）和卖货方法（小红书 / 闲鱼 / 海外）。数字照抄来源，「作者自述」「估算」「缺失」照原样保留。",
+        "",
+    ]
+    for sub in BUSINESS_SUBTYPES:
+        group = [it for it in visible if it.get("subtype") == sub]
+        if not group:
+            continue
+        lines.append(f"## {sub}")
+        lines.append("")
+        for it in group:
+            lines.append(f"### {it['id']} {it['title']}")
+            meta = [f"子类：{it['subtype']}", f"收录：{it.get('date') or '未知'}"]
+            if it.get("rating") and it["rating"] != "待反馈":
+                meta.append(f"评价：{it['rating']}")
+            marks = [m for m, k in (("收藏", "favorite"), ("在做", "doing")) if it.get(k)]
+            if marks:
+                meta.append("标记：" + "、".join(marks))
+            lines.append("- " + " ｜ ".join(meta))
+            if it.get("links"):
+                lines.append("- 来源：" + " ； ".join(f"[{lk['label']}]({lk['url']})" for lk in it["links"]))
+            for label, key in (("发布", "published"), ("卖什么", "what"), ("结果", "result")):
+                if it.get(key):
+                    lines.append(f"- {label}：{it[key]}")
+            if it.get("steps"):
+                step_label = "起步路径" if it["subtype"] in ("起步复盘",) else "怎么做"
+                lines.append(f"- {step_label}：")
+                for n, step in enumerate(it["steps"], 1):
+                    lines.append(f"  {n}. {step}")
+            if it.get("key_moves"):
+                lines.append("- 关键动作：")
+                for mv in it["key_moves"]:
+                    lines.append(f"  - {mv}")
+            if it.get("borrow"):
+                lines.append(f"- 能借的一步：{it['borrow']}")
+            if it.get("pitfalls"):
+                lines.append(f"- 坑/注意：{it['pitfalls']}")
+            if it.get("tags"):
+                lines.append("- 标签：" + "、".join(it["tags"]))
+            lines.append("")
+    return lines
+
+
 def render_materials_md(payload: dict) -> str:
     lines = [
         "# 每日灵感素材库",
         "",
-        f"> 共 {payload['item_count']} 条，覆盖第 1–{payload['batch_max']} 批。生成时间：{payload['generated_at']}（Asia/Seoul）。",
+        f"> 灵感素材 {payload['material_count']} 条，覆盖第 1–{payload['batch_max']} 批；商业库 {payload['business_count']} 条（见文末）。生成时间：{payload['generated_at']}（Asia/Seoul）。",
         f"> 机器可读数据：[{payload['json_path']}]({payload['json_path']})",
         "",
         "本页收录已推送的公开灵感素材（小作品、人群痛点、观点帖、GitHub 工具等）。",
@@ -984,7 +1181,7 @@ def render_materials_md(payload: dict) -> str:
     current_batch = None
     # write oldest-first for reading? site is newest-first; md can group by batch desc
     for item in payload["items"]:
-        if item.get("hidden"):
+        if item.get("hidden") or item.get("board") == "商业":
             continue
         if item.get("batch") != current_batch:
             current_batch = item.get("batch")
@@ -1027,6 +1224,7 @@ def render_materials_md(payload: dict) -> str:
         if not item.get("pushed"):
             lines.append("- 备注：当时找到但未推送的备选")
         lines.append("")
+    lines.extend(render_business_md([it for it in payload["items"] if it.get("board") == "商业"]))
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -1037,8 +1235,10 @@ def render_llms_txt(payload: dict) -> str:
 > 一套按天更新的公开灵感素材卡，方便人像刷信息流一样浏览，也方便其他 AI 直接读取。
 
 - 生成时间：{payload['generated_at']}（Asia/Seoul）
-- 条目数：{payload['item_count']}（第 1–{payload['batch_max']} 批）
-- 分类：{cats}
+- 条目数：{payload['item_count']}（灵感素材 {payload['material_count']} 条，第 1–{payload['batch_max']} 批；商业库 {payload['business_count']} 条）
+- 板块：`board` = 素材 / 商业
+- 素材分类：{cats}
+- 商业子类：{"、".join(payload['business_subtypes'])}
 - 结构化数据：{payload['json_abs_hint']}
 - 全文 Markdown：{payload['md_abs_hint']}
 - 人类浏览页：{payload['site_abs_hint']}
@@ -1053,6 +1253,7 @@ def render_llms_txt(payload: dict) -> str:
 6. `rating=值得做` 只表示评价，不要自动当成正在做。
 7. 数据字段若写明「风向标自述 / 未核验 / 缺失」，不要把数字当成已核实事实。
 8. 只使用条目里出现过的真实链接，不要补造来源。
+9. 商业板块（`board=商业`，编号 B001 起）每条有：`subtype`（起步复盘 / 卖货·小红书 / 卖货·闲鱼 / 卖货·海外 / 商业思路）、`published`（发布信息和互动数据）、`what`（卖什么、卖给谁、价格）、`result`（赚了多少，原文措辞）、`steps`（起步路径或操作步骤，按顺序）、`key_moves`（值得照抄的关键动作）、`borrow`（能借的一步）、`pitfalls`（坑/注意）。标「作者自述」「估算」的数字不要当成已核实。
 
 ## 更新
 
@@ -1074,6 +1275,10 @@ def main() -> None:
                 items[sid] = overlay
 
     finalized = finalize(items)
+    for it in finalized:
+        it["board"] = "素材"
+    material_count = len(finalized)
+    business_items = finalize_business(parse_business(SOURCE_DIR / "商业库.md"))
     batch_nums = [it["batch"] for it in finalized if it.get("batch")]
     used_chips = []
     for chip in FILTER_CHIPS:
@@ -1089,18 +1294,22 @@ def main() -> None:
     payload = {
         "generated_at": generated_at,
         "timezone": "Asia/Seoul",
-        "item_count": len(finalized),
-        "visible_count": sum(1 for it in finalized if not it.get("hidden")),
+        "item_count": len(finalized) + len(business_items),
+        "material_count": material_count,
+        "business_count": len(business_items),
+        "visible_count": sum(1 for it in finalized + business_items if not it.get("hidden")),
         "batch_min": min(batch_nums) if batch_nums else None,
         "batch_max": max(batch_nums) if batch_nums else None,
         "categories": used_chips + extra_cats,
         "stages": STAGE_CANON,
+        "boards": ["素材", "商业"],
+        "business_subtypes": BUSINESS_SUBTYPES,
         "json_path": "data/materials.json",
         "md_path": "materials.md",
         "json_abs_hint": f"{SITE_URL}/data/materials.json",
         "md_abs_hint": f"{SITE_URL}/materials.md",
         "site_abs_hint": f"{SITE_URL}/",
-        "items": finalized,
+        "items": business_items + finalized,
     }
 
     json_path = DATA_DIR / "materials.json"
@@ -1112,9 +1321,9 @@ def main() -> None:
 
     # quick report
     missing_title = [it["id"] for it in finalized if not it["title"] or it["title"] == it["id"]]
-    missing_links = [it["id"] for it in finalized if not it["links"]]
+    missing_links = [it["id"] for it in finalized + business_items if not it["links"]]
     print(f"source: {SOURCE_DIR}")
-    print(f"items: {len(finalized)} (hidden/pass: {payload['item_count'] - payload['visible_count']})")
+    print(f"items: {len(finalized)} materials + {len(business_items)} business (hidden/pass: {payload['item_count'] - payload['visible_count']})")
     print(f"batches: {payload['batch_min']}–{payload['batch_max']}")
     print(f"categories: {', '.join(payload['categories'])}")
     print(f"missing titles: {missing_title or 'none'}")

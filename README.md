@@ -30,8 +30,9 @@
 
 1. 把当天的条目追加进 `素材池_总整理.md`（沿用现有的 `Sxxx 标题｜链接｜数据｜分类｜…` 格式，或写成 `每日素材_YYYY-MM-DD.md` 那种分条字段）。
 2. 同时保存一份 `每日素材_YYYY-MM-DD.md`。
-3. 如果有新的评价或要记下「收藏 / 在做」，改 `site/data/ratings.json`（格式见下面）。评价写成 `pass` 的条目会在页面里默认隐藏。
-4. 重新生成站点数据：
+3. 如果当天有商业类素材（别人怎么从零赚到钱、小红书 / 闲鱼 / 海外卖货方法），追加到 `/workspace/mirror/商业库.md`：编号 B001 起往后加，写法见那个文件开头的说明。字段有子类、来源、发布、卖什么、结果、起步路径、关键动作、能借的一步、坑、收录、标签。
+4. 如果有新的评价或要记下「收藏 / 在做」，改 `site/data/ratings.json`（格式见下面）。评价写成 `pass` 的条目会在页面里默认隐藏。
+5. 重新生成站点数据：
 
 ```bash
 cd /workspace/mirror/site
@@ -44,7 +45,7 @@ python3 generate.py
 SUCAI_SOURCE=/workspace/mirror python3 /workspace/mirror/site/generate.py
 ```
 
-5. 把生成结果推到 GitHub，Pages 会自动更新：
+6. 把生成结果推到 GitHub，Pages 会自动更新：
 
 ```bash
 cd /workspace/mirror/site
@@ -61,6 +62,12 @@ git push origin main
 每条素材大致包含：`id`、`batch`、`date`、`title`、`category`、`filter_tags`、`links`、`data`、`why_popular`、`viewer_moment`、`stage`、`idea`、`difficulty`、`tags`、`rating`、`hidden`、`pushed`、`favorite`、`doing`。
 
 没有核实过的链接会如实留空，不会补造。风向标等二手数据会保留原文里的“自述 / 未核验”提示。
+
+## 商业板块
+
+页面顶部有「💡 灵感素材 / 💰 商业 / 全部」三个板块。商业板块的卡片编号是 B001 起，原文在 `/workspace/mirror/商业库.md`（不在本仓库里，生成时读取）。子类有：起步复盘、卖货·小红书、卖货·闲鱼、卖货·海外、商业思路。卡片上显示结果、前 3 步路径和「能借的一步」，点开能看完整的起步路径时间线、关键动作和坑。
+
+`materials.json` 里商业条目带 `board: "商业"`，另有 `subtype`、`published`、`what`、`result`、`steps`（数组）、`key_moves`（数组）、`borrow`、`pitfalls`。素材条目带 `board: "素材"`。顶层另有 `material_count`、`business_count`。收藏和在做对 B 条目同样有效，`ratings.json` 里也可以写 `"B003": {"favorite": true}`。网站链接加 `#商业` 会直接打开商业板块，加 `#B003` 会直接打开那一条。
 
 ## 收藏和「在做」
 
